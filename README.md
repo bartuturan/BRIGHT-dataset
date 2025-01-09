@@ -18,10 +18,7 @@
 
 ## 🔭Overview
 
-* [**BRIGHT**](https://ieeexplore.ieee.org/document/10565926) is the first open-access, globally distributed, event-diverse multimodal dataset specifically curated to support AI-based disaster response. 
-
-
-* It covers five types of natural disasters and two types of man-made disasters across 12 regions worldwide, with a particular focus on developing countries. BRIGHT has over 4,500 paired optical and SAR images containing over 350,000 building instances, with a spatial resolution between 0.3 and 1 meters, provides detailed representations of individual buildings, making it ideal for precise damage assessment
+* [**BRIGHT**](https://ieeexplore.ieee.org/document/10565926) is the first open-access, globally distributed, event-diverse multimodal dataset specifically curated to support AI-based disaster response. It covers five types of natural disasters and two types of man-made disasters across 12 regions worldwide, with a particular focus on developing countries. 
 
 <p align="center">
   <img src="figure/thumbnail.png" alt="accuracy" width="90%">
