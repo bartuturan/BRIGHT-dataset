@@ -8,13 +8,14 @@
 
 <sup>1</sup> The University of Tokyo, <sup>2</sup> RIKEN AIP,  <sup>3</sup> ETH Zurich,  <sup>4</sup> Microsoft Research Asia
 
- [![arXiv paper](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/pdf/2404.03425.pdf) [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-green)](https://zenodo.org/records/14037770) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ChenHongruixuan.BRIGHT&left_color=%2363C7E6&right_color=%23CEE75F)
+ [![arXiv paper](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/pdf/2404.03425.pdf) [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-green)](https://zenodo.org/records/14037770) [![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://zenodo.org/records/14037770) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ChenHongruixuan.BRIGHT&left_color=%2363C7E6&right_color=%23CEE75F)
 
 </div>
 
 ## 🛎️Updates
-* **` Notice☀️☀️`**: BRIGHT serves as the official dataset of IEEE GRSS DFC 2025 Track II. You can download the dataset in  [Zenodo]() or [HuggingFace]() and submit your results to [leaderboard]()!!
-* **` April 12th, 2024`**: The [[arXiv](https://arxiv.org/pdf/2404.03425.pdf)] paper introducing details of BRIGHT is now online!!
+* **` Notice☀️☀️`**: BRIGHT serves as the official dataset of [IEEE GRSS DFC 2025 Track II](). You can download the dataset in  [Zenodo]() or [HuggingFace](), use the code in this repo to run models and submit your results to [leaderboard]()!!
+* **` April 13th, 2024`**: The benchmark code for IEEE GRSS DFC 2025 Track II is now available. You are welcome to use it !!
+* **` April 13th, 2024`**: The [[arXiv](https://arxiv.org/pdf/2404.03425.pdf)] paper of BRIGHT is now online. If you are interested in details of BRIGHT, do not hesitate to take a look!!
 
 ## 🔭Overview
 
@@ -26,6 +27,94 @@
 
 
 ## 🗝️Let's Get Started!
-### `A. Data Preparation`
-Please download the BRIGHT from Zenodo or Huggingface and make them have the following folder/file structure:
+### `A. Installation`
 
+Note that the code in this repo runs under **Linux** system. We have not tested whether it works under other OS.
+
+**Step 1: Clone the repository:**
+
+Clone this repository and navigate to the project directory:
+```bash
+git clone https://github.com/ChenHongruixuan/BRIGHT.git
+cd BRIGHT
+```
+
+**Step 2: Environment Setup:**
+
+It is recommended to set up a conda environment and installing dependencies via pip. Use the following commands to set up your environment:
+
+***Create and activate a new conda environment***
+
+```bash
+conda create -n bright-benchmark
+conda activate bright-benchmark
+```
+
+***Install dependencies***
+
+```bash
+pip install -r requirements.txt
+```
+
+
+
+### `B. Data Preparation`
+Please download the BRIGHT from [Zenodo]() or [HuggingFace]() and make them have the following folder/file structure:
+```
+${DATASET_ROOT}   # Dataset root directory, for example: /home/username/data/SYSU
+│
+├── train
+│   ├── pre-event
+│   │   ├──00001.tif
+│   │   ├──00002.tif
+│   │   ├──00003.tif
+│   │   ...
+│   │
+│   ├── post-event
+│   │   ├──00001.tif
+│   │   ... 
+│   │
+│   └── target
+│       ├──00001.tif 
+│       ...   
+│   
+└── val
+     ├── ...
+     ...
+```
+
+### `C. Model Training & Inference`
+Before training models, please enter into [`dfc_25_benchmark`] folder, which contains all the code for network definitions, training and testing. 
+
+```bash
+cd <project_path>/BRIGHT/dfc_25_benchmark
+```
+
+please run the script first to split a subset for tuning hyperparameters. 
+
+
+The following commands show how to train and evaluate UNet on the BRIGHT dataset:
+
+
+### `D. Inference & Submission`
+
+
+
+## 📜Reference
+
+If this dataset or code contributes to your research, please kindly consider citing our paper and give this repo ⭐️ :)
+```
+@article{chen2024changemamba,
+  author={Hongruixuan Chen and Jian Song and Chengxi Han and Junshi Xia and Naoto Yokoya},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={ChangeMamba: Remote Sensing Change Detection with Spatiotemporal State Space Model}, 
+  year={2024},
+  volume={62},
+  number={},
+  pages={1-20},
+  doi={10.1109/TGRS.2024.3417253}
+}
+```
+
+## 🤝Acknowledgments
+The authors would also like to give special thanks to [Sarah Preston](https://www.linkedin.com/in/sarahjpreston/) of Capella Space, [Capella Space's Open Data Gallery](https://www.capellaspace.com/earth-observation/gallery), [Maxar Open Data Program](https://www.maxar.com/open-data) and [Umbra Space's Open Data Program](https://umbra.space/open-data/) for providing the valuable data.
