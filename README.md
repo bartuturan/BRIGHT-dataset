@@ -119,7 +119,7 @@ Based on peers' questions from [issue section](https://github.com/ChenHongruixua
 
 | Issue | Solution | 
 | :---: | :---: | 
-|  Incorrect accuracy evaluated by leaderboard   |   Keep the prediction name and label name consistent / Zip all prediction files directly, not the folder containing them.     |
+|  Abnormal accuracy (like 0 or -999999) given by leaderboard   |   Keep the prediction name and label name consistent / Zip all prediction files directly, not the folder containing them.     |
 
 
 ## 📜Reference
