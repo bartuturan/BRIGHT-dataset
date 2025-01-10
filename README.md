@@ -8,12 +8,12 @@
 
 <sup>1</sup> The University of Tokyo, <sup>2</sup> RIKEN AIP,  <sup>3</sup> ETH Zurich,  <sup>4</sup> Microsoft Research Asia
 
- [![arXiv paper](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/pdf/2404.03425.pdf) [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-green)](https://zenodo.org/records/14037770) [![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/Kullervo/BRIGHT) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ChenHongruixuan.BRIGHT&left_color=%2363C7E6&right_color=%23CEE75F)
+ [![arXiv paper](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/pdf/2404.03425.pdf)  [![Codalab Leaderboard](https://img.shields.io/badge/Codalab-Leaderboard-cyan)](https://huggingface.co/datasets/Kullervo/BRIGHT) [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-green)](https://zenodo.org/records/14037770)   [![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/Kullervo/BRIGHT)    ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ChenHongruixuan.BRIGHT&left_color=%2363C7E6&right_color=%23CEE75F)
 
 </div>
 
 ## 🛎️Updates
-* **` Notice☀️☀️`**: BRIGHT serves as the official dataset of [IEEE GRSS DFC 2025 Track II](https://www.grss-ieee.org/technical-committees/image-analysis-and-data-fusion/). You can download the dataset in  [Zenodo]() or [HuggingFace](), use the code in this repo to run models and submit your results to [leaderboard]()!!
+* **` Notice☀️☀️`**: BRIGHT serves as the official dataset of [IEEE GRSS DFC 2025 Track II](https://www.grss-ieee.org/technical-committees/image-analysis-and-data-fusion/). You can download the dataset in  [Zenodo]() or [HuggingFace](https://huggingface.co/datasets/Kullervo/BRIGHT), use the code in this repo to run models and submit your results to [Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/21122) in CodaLab!!
 * **` April 13th, 2024`**: The benchmark code for IEEE GRSS DFC 2025 Track II is now available. Please follow the instruction in this README file to use it!!
 * **` April 13th, 2024`**: The [[arXiv](https://arxiv.org/pdf/2404.03425.pdf)] paper of BRIGHT is now online. If you are interested in details of BRIGHT, do not hesitate to take a look!!
 
@@ -26,7 +26,7 @@
 </p>
 
 
-## 🗝️Let's Get Started!
+## 🗝️Let's Get Started with DFC 2025!
 ### `A. Installation`
 
 Note that the code in this repo runs under **Linux** system. We have not tested whether it works under other OS.
@@ -59,28 +59,33 @@ pip install -r requirements.txt
 
 
 ### `B. Data Preparation`
-Please download the BRIGHT from [Zenodo]() or [HuggingFace]() and make them have the following folder/file structure:
+Please download the BRIGHT from [Zenodo]() or [HuggingFace](https://huggingface.co/datasets/Kullervo/BRIGHT) and make them have the following folder/file structure:
 ```
 ${DATASET_ROOT}   # Dataset root directory, for example: /home/username/data/SYSU
 │
 ├── train
-│   ├── pre-event
-│   │   ├──00001.tif
-│   │   ├──00002.tif
-│   │   ├──00003.tif
-│   │   ...
-│   │
-│   ├── post-event
-│   │   ├──00001.tif
-│   │   ... 
-│   │
-│   └── target
-│       ├──00001.tif 
-│       ...   
+│    ├── pre-event
+│    │    ├──bata-explosion_00000000_pre_disaster.tif
+│    │    ├──bata-explosion_00000001_pre_disaster.tif
+│    │    ├──bata-explosion_00000002_pre_disaster.tif
+│    │   ...
+│    │
+│    ├── post-event
+│    │    ├──bata-explosion_00000001_post_disaster.tif
+│    │    ... 
+│    │
+│    └── target
+│         ├──00001.tif 
+│         ...   
 │   
 └── val
-     ├── ...
-     ...
+     ├── pre-event
+     │    ├──bata-explosion_00000000_pre_disaster.tif
+     │   ...
+     │
+     └── post-event
+          ├──bata-explosion_00000001_post_disaster.tif
+         ...
 ```
 
 ### `C. Model Training & Tuning`
@@ -107,7 +112,7 @@ python script/infer_MambaBCD.py  --dataset 'BRIGHT' \
 ```
 
 
-Then, you can go to the official [leaderboard]() to submit your results. 
+Then, you can go to the official [Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/21122) in CodaLab to submit your results. 
 
 * `Keep the prediction name and label name consistent, i.e., turkey-earthquake_00000001_building_damage.png, hawaii-wildfire_00000003_building_damage.png, and so on.`
 * `All png files should be submitted in zip file format. Zip all prediction files directly, not the folder containing them.`
