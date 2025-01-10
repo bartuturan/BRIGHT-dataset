@@ -13,8 +13,8 @@
 </div>
 
 ## 🛎️Updates
-* **` Notice☀️☀️`**: BRIGHT serves as the official dataset of [IEEE GRSS DFC 2025 Track II](). You can download the dataset in  [Zenodo]() or [HuggingFace](), use the code in this repo to run models and submit your results to [leaderboard]()!!
-* **` April 13th, 2024`**: The benchmark code for IEEE GRSS DFC 2025 Track II is now available. You are welcome to use it !!
+* **` Notice☀️☀️`**: BRIGHT serves as the official dataset of [IEEE GRSS DFC 2025 Track II](https://www.grss-ieee.org/technical-committees/image-analysis-and-data-fusion/). You can download the dataset in  [Zenodo]() or [HuggingFace](), use the code in this repo to run models and submit your results to [leaderboard]()!!
+* **` April 13th, 2024`**: The benchmark code for IEEE GRSS DFC 2025 Track II is now available. Please follow the instruction in this README file to use it!!
 * **` April 13th, 2024`**: The [[arXiv](https://arxiv.org/pdf/2404.03425.pdf)] paper of BRIGHT is now online. If you are interested in details of BRIGHT, do not hesitate to take a look!!
 
 ## 🔭Overview
@@ -83,7 +83,7 @@ ${DATASET_ROOT}   # Dataset root directory, for example: /home/username/data/SYS
      ...
 ```
 
-### `C. Model Training & Inference`
+### `C. Model Training & Tuning`
 Before training models, please enter into [`dfc_25_benchmark`] folder, which contains all the code for network definitions, training and testing. 
 
 ```bash
@@ -97,7 +97,29 @@ The following commands show how to train and evaluate UNet on the BRIGHT dataset
 
 
 ### `D. Inference & Submission`
+For both development and test stage, you can run the code to generate prediction results
+```bash
+python script/infer_MambaBCD.py  --dataset 'BRIGHT' \
+                                 --inference_dataset_path '<dataset_path>/val' \
+                                 --inference_data_list_path '<dataset_path>/BRIGHT/val_list.txt' \
+                                 --inference_saved_path '<saved_path>' \
+                                 --resume '<saved_model_path>/<your_models_name.pth>'
+```
 
+
+Then, you can go to the official [leaderboard]() to submit your results. 
+
+* `Keep the prediction name and label name consistent, i.e., turkey-earthquake_00000001_building_damage.png, hawaii-wildfire_00000003_building_damage.png, and so on.`
+* `All png files should be submitted in zip file format. Zip all prediction files directly, not the folder containing them.`
+
+
+
+## 🤔Common Issues
+Based on peers' questions from [issue section](https://github.com/ChenHongruixuan/BRIGHT/issues), here's a quick navigate list of solutions to some common issues.
+
+| Issue | Solution | 
+| :---: | :---: | 
+|  Incorrect accuracy evaluated by leaderboard   |   Keep the prediction name and label name consistent / Zip all prediction files directly, not the folder containing them.     |
 
 
 ## 📜Reference
