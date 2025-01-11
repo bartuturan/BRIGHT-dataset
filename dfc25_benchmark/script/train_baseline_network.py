@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/songjian/project/BRIGHT/dfc25_benchmark') # change this to the path of your project
+sys.path.append('/home/chenhrx/project/BRIGHT/dfc25_benchmark') # change this to the path of your project
 
 import argparse
 import os

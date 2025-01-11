@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/songjian/project/BRIGHT/dfc25_benchmark') # change this to the path of your project
+sys.path.append('/home/chenhrx/project/BRIGHT/dfc25_benchmark') # change this to the path of your project
 
 import os
 import torch
@@ -77,7 +77,7 @@ class Inference:
 
 
     def save_prediction_map(self, prediction, file_name):
-        """Saves the colored damage map."""
+        """Saves the raw and colored prediction maps"""
         color_map_img = np.zeros((prediction.shape[0], prediction.shape[1], 3), dtype=np.uint8)
         
         for cls, color in self.color_map.items():
