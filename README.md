@@ -67,7 +67,7 @@ pip install -r requirements.txt
 ### `B. Data Preparation`
 Please download the BRIGHT from [Zenodo](https://zenodo.org/records/14619798) or [HuggingFace](https://huggingface.co/datasets/Kullervo/BRIGHT) and make them have the following folder/file structure:
 ```
-${DATASET_ROOT}   # Dataset root directory, for example: /home/username/data/SYSU
+${DATASET_ROOT}   # Dataset root directory, for example: /home/username/data/dfc25_track2_trainval
 │
 ├── train
 │    ├── pre-event
@@ -107,18 +107,18 @@ python script/train_baseline_network.py  --dataset 'BRIGHT' \
                                           --max_iters 800000 \
                                           --learning_rate 1e-4 \
                                           --model_type 'UNet' \
-                                          --train_dataset_path '<your dataset path>/dfc25_track2_trainval/train' \
-                                          --train_data_list_path '<your project path>/BRIGHT/dfc25_benchmark/dataset/splitname/train_setlevel.txt' \
-                                          --holdout_dataset_path '<your dataset path>dfc25_track2_trainval/train' \
-                                          --holdout_data_list_path '<your project path>/BRIGHT/dfc25_benchmark/dataset/splitname/holdout_setlevel.txt' 
+                                          --train_dataset_path '<your dataset path>/train' \
+                                          --train_data_list_path '<your project path>/dfc25_benchmark/dataset/splitname/train_setlevel.txt' \
+                                          --holdout_dataset_path '<your dataset path>/train' \
+                                          --holdout_data_list_path '<your project path>/dfc25_benchmark/dataset/splitname/holdout_setlevel.txt' 
 ```
 
 
 ### `D. Inference & Submission`
 For current development stage and subsequent test stage, you can run the following code to generate raw and visualized prediction results
 ```bash
-python script/infer_using_baseline_network.py  --val_dataset_path '<your dataset path>/dfc25_track2_trainval/val' \
-                                               --val_data_list_path '<your project path>/BRIGHT/dfc25_benchmark/dataset/splitname/val_setlevel.txt' \
+python script/infer_using_baseline_network.py  --val_dataset_path '<your dataset path>/val' \
+                                               --val_data_list_path '<your project path>/dfc25_benchmark/dataset/splitname/val_setlevel.txt' \
                                                --existing_weight_path '<your trained model path>' \
                                                --inferece_saved_path '<your inference results saved path>'
 ```
