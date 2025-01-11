@@ -1,6 +1,8 @@
 <div align="center">
 <h1 align="center">☀️BRIGHT☀️</h1>
+
 <h3>BRIGHT: A globally distributed multimodal VHR dataset for all-weather disaster response</h3>
+
 
 [Hongruixuan Chen](https://scholar.google.ch/citations?user=XOk4Cf0AAAAJ&hl=zh-CN&oi=ao)<sup>1,2</sup>, [Jian Song](https://scholar.google.ch/citations?user=CgcMFJsAAAAJ&hl=zh-CN)<sup>1,2</sup>, [Olivier Dietrich](https://scholar.google.ch/citations?user=st6IqcsAAAAJ&hl=de)<sup>3</sup>, [Clifford Broni-Bediako](https://scholar.google.co.jp/citations?user=Ng45cnYAAAAJ&hl=en)<sup>2</sup>, [Weihao Xuan](https://scholar.google.com/citations?user=7e0W-2AAAAAJ&hl=en)<sup>1,2</sup>, [Junjue Wang](https://scholar.google.com.hk/citations?user=H58gKSAAAAAJ&hl=en)<sup>1</sup>  
 [Xinlei Shao](https://scholar.google.com/citations?user=GaRXJFcAAAAJ&hl=en)<sup>1</sup>, Yimin Wei<sup>1,2</sup>, [Junshi Xia](https://scholar.google.com/citations?user=n1aKdTkAAAAJ&hl=en)<sup>3</sup>, [Cuiling Lan](https://scholar.google.com/citations?user=XZugqiwAAAAJ&hl=zh-CN)<sup>4</sup>, [Konrad Schindler](https://scholar.google.com/citations?user=FZuNgqIAAAAJ&hl=en)<sup>3</sup>, [Naoto Yokoya](https://scholar.google.co.jp/citations?user=DJ2KOn8AAAAJ&hl=en)<sup>1,2 *</sup>
@@ -28,7 +30,7 @@
 * [**BRIGHT**](https://ieeexplore.ieee.org/document/10565926) is the first open-access, globally distributed, event-diverse multimodal dataset specifically curated to support AI-based disaster response. It covers five types of natural disasters and two types of man-made disasters across 12 regions worldwide, with a particular focus on developing countries. 
 
 <p align="center">
-  <img src="figure/overall.jpg" alt="accuracy" width="95%">
+  <img src="figure/overall.jpg" alt="accuracy" width="97%">
 </p>
 
 
@@ -77,34 +79,38 @@ ${DATASET_ROOT}   # Dataset root directory, for example: /home/username/data/SYS
 │    │   ...
 │    │
 │    ├── post-event
-│    │    ├──bata-explosion_00000001_post_disaster.tif
+│    │    ├──bata-explosion_00000000_post_disaster.tif
 │    │    ... 
 │    │
 │    └── target
-│         ├──00001.tif 
+│         ├──bata-explosion_00000000_building_damage.tif 
 │         ...   
 │   
 └── val
      ├── pre-event
-     │    ├──bata-explosion_00000000_pre_disaster.tif
+     │    ├──bata-explosion_00000003_pre_disaster.tif
      │   ...
      │
      └── post-event
-          ├──bata-explosion_00000001_post_disaster.tif
+          ├──bata-explosion_00000003_post_disaster.tif
          ...
 ```
 
 ### `C. Model Training & Tuning`
-Before training models, please enter into [`dfc_25_benchmark`] folder, which contains all the code for network definitions, training and testing. 
-
+The following commands show how to train and evaluate UNet on the BRIGHT dataset using our split set in [`dfc25_benchmark/dataset`]:
 ```bash
-cd <project_path>/BRIGHT/dfc_25_benchmark
+python script/train_baseline_network.py  --dataset 'BRIGHT' \
+                                          --train_batch_size 16 \
+                                          --num_workers 1 \
+                                          --crop_size 512 \
+                                          --max_iters 800000 \
+                                          --learning_rate 1e-4 \
+                                          --model_type 'UNet' \
+                                          --train_dataset_path '<your dataset path>/dfc25_track2_trainval/train' \
+                                          --train_data_list_path '<your project path>/BRIGHT/dfc25_benchmark/dataset/splitname/train_setlevel.txt' \
+                                          --holdout_dataset_path '<your dataset path>dfc25_track2_trainval/train' \
+                                          --holdout_data_list_path '<your project path>/BRIGHT/dfc25_benchmark/dataset/splitname/holdout_setlevel.txt' 
 ```
-
-please run the script first to split a subset for tuning hyperparameters. 
-
-
-The following commands show how to train and evaluate UNet on the BRIGHT dataset:
 
 
 ### `D. Inference & Submission`
