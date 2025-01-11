@@ -101,8 +101,9 @@ The following commands show how to train and evaluate UNet on the BRIGHT dataset
 ```bash
 python script/train_baseline_network.py  --dataset 'BRIGHT' \
                                           --train_batch_size 16 \
+                                          --eval_batch_size 4 \
                                           --num_workers 1 \
-                                          --crop_size 512 \
+                                          --crop_size 640 \
                                           --max_iters 800000 \
                                           --learning_rate 1e-4 \
                                           --model_type 'UNet' \
@@ -116,11 +117,10 @@ python script/train_baseline_network.py  --dataset 'BRIGHT' \
 ### `D. Inference & Submission`
 For both development and test stage, you can run the code to generate prediction results
 ```bash
-python script/infer_MambaBCD.py  --dataset 'BRIGHT' \
-                                 --inference_dataset_path '<dataset_path>/val' \
-                                 --inference_data_list_path '<dataset_path>/BRIGHT/val_list.txt' \
-                                 --inference_saved_path '<saved_path>' \
-                                 --resume '<saved_model_path>/<your_models_name.pth>'
+python script/infer_using_baseline_network.py  --val_dataset_path '<your dataset path>/dfc25_track2_trainval/val' \
+                                               --val_data_list_path '<your project path>/BRIGHT/dfc25_benchmark/dataset/splitname/val_setlevel.txt' \
+                                               --existing_weight_path '<your model path>' \
+                                               --inferece_saved_path '<your inference results saved path>'
 ```
 
 
