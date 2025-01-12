@@ -10,7 +10,7 @@
 
 <sup>1</sup> The University of Tokyo, <sup>2</sup> RIKEN AIP,  <sup>3</sup> ETH Zurich,  <sup>4</sup> Microsoft Research Asia
 
-[![arXiv paper](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/pdf/2404.03425.pdf)  [![Codalab Leaderboard](https://img.shields.io/badge/Codalab-Leaderboard-cyan)](https://codalab.lisn.upsaclay.fr/competitions/21122) [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-blue)](https://zenodo.org/records/14619798)   [![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/Kullervo/BRIGHT) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ChenHongruixuan.BRIGHT&left_color=%2363C7E6&right_color=%23CEE75F)
+[![arXiv paper](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://github.com/ChenHongruixuan/BRIGHT/BRIGHT_paper.pdf)  [![Codalab Leaderboard](https://img.shields.io/badge/Codalab-Leaderboard-cyan)](https://codalab.lisn.upsaclay.fr/competitions/21122) [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-blue)](https://zenodo.org/records/14619798)   [![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/Kullervo/BRIGHT) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ChenHongruixuan.BRIGHT&left_color=%2363C7E6&right_color=%23CEE75F)
 
 
 [**Overview**](#overview) | [**Start DFC25**](#%EF%B8%8Flets-get-started-with-dfc-2025) | [**Common Issues**](#common-issues) | [**Others**](#q--a) 
@@ -20,12 +20,12 @@
 
 ## 🛎️Updates
 * **` Notice☀️☀️`**: BRIGHT serves as the official dataset of [IEEE GRSS DFC 2025 Track II](https://www.grss-ieee.org/technical-committees/image-analysis-and-data-fusion/). You can download the dataset in  [Zenodo](https://zenodo.org/records/14619798) or [HuggingFace](https://huggingface.co/datasets/Kullervo/BRIGHT), use the code in this repo to run models and submit your results to [Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/21122) in CodaLab!!
-* **` April 13th, 2024`**: The [arXiv paper](https://arxiv.org/pdf/2404.03425.pdf) of BRIGHT is now online. If you are interested in details of BRIGHT, do not hesitate to take a look!!
-* **` April 13th, 2024`**: The benchmark code for IEEE GRSS DFC 2025 Track II is now available. Please follow the [**instruction**](#%EF%B8%8Flets-get-started-with-dfc-2025) to use it!!
+<!-- * **` April 13th, 2024`**: The [arXiv paper](https://arxiv.org/pdf/2404.03425.pdf) of BRIGHT is now online. If you are interested in details of BRIGHT, do not hesitate to take a look!! -->
+* **` Jan 13th, 2025`**: The benchmark code for IEEE GRSS DFC 2025 Track II is now available. Please follow the [**instruction**](#%EF%B8%8Flets-get-started-with-dfc-2025) to use it!!
 
 ## 🔭Overview
 
-* [**BRIGHT**](https://ieeexplore.ieee.org/document/10565926) is the first open-access, globally distributed, event-diverse multimodal dataset specifically curated to support AI-based disaster response. It covers five types of natural disasters and two types of man-made disasters across 12 regions worldwide, with a particular focus on developing countries (`9 of 12 events are used for training and validation of IEEE GRSS DFC 2025`). 
+* [**BRIGHT**](https://github.com/ChenHongruixuan/BRIGHT/BRIGHT_paper.pdf) is the first open-access, globally distributed, event-diverse multimodal dataset specifically curated to support AI-based disaster response. It covers five types of natural disasters and two types of man-made disasters across 12 regions worldwide, with a particular focus on developing countries (`9 of 12 events are used for training and validation of IEEE GRSS DFC 2025`). 
 
 <p align="center">
   <img src="figure/overall.jpg" alt="accuracy" width="97%">
@@ -144,16 +144,6 @@ Based on peers' questions from [issue section](https://github.com/ChenHongruixua
 
 If this dataset or code contributes to your research, please kindly consider citing our paper and give this repo ⭐️ :)
 ```
-@article{chen2024changemamba,
-  author={Hongruixuan Chen and Jian Song and Chengxi Han and Junshi Xia and Naoto Yokoya},
-  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
-  title={ChangeMamba: Remote Sensing Change Detection with Spatiotemporal State Space Model}, 
-  year={2024},
-  volume={62},
-  number={},
-  pages={1-20},
-  doi={10.1109/TGRS.2024.3417253}
-}
 ```
 
 ## 🤝Acknowledgments
