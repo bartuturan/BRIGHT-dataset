@@ -10,7 +10,7 @@
 
 <sup>1</sup> The University of Tokyo, <sup>2</sup> RIKEN AIP,  <sup>3</sup> ETH Zurich,  <sup>4</sup> Microsoft Research Asia
 
-[![arXiv paper](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://github.com/ChenHongruixuan/BRIGHT/BRIGHT_paper.pdf)  [![Codalab Leaderboard](https://img.shields.io/badge/Codalab-Leaderboard-cyan)](https://codalab.lisn.upsaclay.fr/competitions/21122) [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-blue)](https://zenodo.org/records/14619798)   [![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/Kullervo/BRIGHT) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ChenHongruixuan.BRIGHT&left_color=%2363C7E6&right_color=%23CEE75F)
+[![arXiv paper](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://github.com/ChenHongruixuan/BRIGHT/blob/master/BRIGHT_paper.pdf)  [![Codalab Leaderboard](https://img.shields.io/badge/Codalab-Leaderboard-cyan)](https://codalab.lisn.upsaclay.fr/competitions/21122) [![Zenodo Dataset](https://img.shields.io/badge/Zenodo-Dataset-blue)](https://zenodo.org/records/14619798)   [![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/Kullervo/BRIGHT) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ChenHongruixuan.BRIGHT&left_color=%2363C7E6&right_color=%23CEE75F)
 
 
 [**Overview**](#overview) | [**Start DFC25**](#%EF%B8%8Flets-get-started-with-dfc-2025) | [**Common Issues**](#common-issues) | [**Others**](#q--a) 
@@ -25,7 +25,7 @@
 
 ## 🔭Overview
 
-* [**BRIGHT**](https://github.com/ChenHongruixuan/BRIGHT/BRIGHT_paper.pdf) is the first open-access, globally distributed, event-diverse multimodal dataset specifically curated to support AI-based disaster response. It covers five types of natural disasters and two types of man-made disasters across 12 regions worldwide, with a particular focus on developing countries (`9 of 12 events are used for training and validation of IEEE GRSS DFC 2025`). 
+* [**BRIGHT**](https://github.com/ChenHongruixuan/BRIGHT/blob/master/BRIGHT_paper.pdf) is the first open-access, globally distributed, event-diverse multimodal dataset specifically curated to support AI-based disaster response. It covers five types of natural disasters and two types of man-made disasters across 12 regions worldwide, with a particular focus on developing countries (`9 of 12 events are used for training and validation of IEEE GRSS DFC 2025`). 
 
 <p align="center">
   <img src="figure/overall.jpg" alt="accuracy" width="97%">
@@ -142,7 +142,7 @@ Based on peers' questions from [issue section](https://github.com/ChenHongruixua
 
 ## 📜Reference
 
-If this dataset or code contributes to your research, please kindly consider citing our paper and give this repo ⭐️ :)
+If this dataset or code contributes to your research, please kindly consider citing our paper (will be on arXiv soon) and give this repo ⭐️ :)
 ```
 ```
 
