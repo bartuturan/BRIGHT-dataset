@@ -142,7 +142,7 @@ Based on peers' questions from [issue section](https://github.com/ChenHongruixua
 
 ## 📜Reference
 
-If this dataset or code contributes to your research, please kindly consider citing our paper (will be on arXiv soon) and give this repo ⭐️ :)
+If this dataset or code contributes to your research, please kindly consider citing our paper and give this repo ⭐️ :)
 ```
 @article{chen2025bright,
       title={BRIGHT: A globally distributed multimodal building damage assessment dataset with very-high-resolution for all-weather disaster response}, 
