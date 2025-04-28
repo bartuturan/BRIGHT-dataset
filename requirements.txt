@@ -1,6 +1,6 @@
 imageio==2.34.0
-matplotlib==3.9.0
-numpy==2.2.1
+matplotlib>=3.8
+numpy=>1.21
 Pillow==11.1.0
 torch==2.2.1
 torchvision==0.17.1
